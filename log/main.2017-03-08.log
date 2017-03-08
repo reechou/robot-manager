@@ -1,0 +1,26 @@
+2017/03/08 11:59:25  INFO [controller.(*Logic).Run](logic.go:54) server starting on[:7171]..
+2017/03/08 11:59:53  INFO [controller.(*Logic).Run](logic.go:54) server starting on[:7171]..
+2017/03/08 12:01:43  INFO [controller.(*Logic).Run](logic.go:54) server starting on[:7171]..
+2017/03/08 12:02:14  INFO [controller.(*Logic).Run](logic.go:54) server starting on[:7171]..
+2017/03/08 12:02:51  INFO [controller.(*Logic).Run](logic.go:54) server starting on[:7171]..
+2017/03/08 16:13:52  INFO [controller.(*Logic).Run](logic.go:60) server starting on[:7171]..
+2017/03/08 16:17:41 DEBUG [models.GetRobotGroupNewChatList](wx_group_chat.go:79) robotid[2] t[0] get new group chat list
+2017/03/08 16:18:53 DEBUG [models.GetRobotGroupFromUserName](wx_group.go:99) cannot find robot group from user_name[@@078cd17d5b7b11b26d86ecd761afc730314ef062e7081a15f9bc5a5a617109f0]
+2017/03/08 16:18:53  INFO [models.CreateRobotGroupChat](wx_group_chat.go:54) create robot chat robot[Lefit铅笔] group[测试] fromUser[REAL_MANAGER_WOWOWO_REE] content[xxxxxz] success.
+2017/03/08 16:18:55 DEBUG [models.GetRobotGroupNewChatList](wx_group_chat.go:79) robotid[2] t[0] get new group chat list
+2017/03/08 16:19:35 DEBUG [controller.(*RobotGroupMass).handleGroupMass](robot_group_mass.go:114) handle group mass[&{Lefit铅笔 {text reeeeee} 1 测试 []}] start.
+2017/03/08 16:19:35 ERROR [models.CreateRobotGroupMass](wx_group_mass.go:34) create robot group mass error: Error 1146: Table 'robot_manager.robot_group_mass' doesn't exist
+2017/03/08 16:19:35 DEBUG [controller.(*RobotExt).SendMsgs](robot_ext.go:189) msg: &{[{Lefit铅笔 group 测试11111 @@2786daf33443ad8a21c4537acd0b4aff12f2366ed0e61b994e35882f1d178a89 text reeeeee≎}]}
+2017/03/08 16:19:38 DEBUG [controller.(*RobotExt).SendMsgs](robot_ext.go:189) msg: &{[{Lefit铅笔 group 测试 @@078cd17d5b7b11b26d86ecd761afc730314ef062e7081a15f9bc5a5a617109f0 text reeeeee≑}]}
+2017/03/08 16:19:40 DEBUG [controller.(*RobotGroupMass).handleGroupMass](robot_group_mass.go:158) handle group mass[&{Lefit铅笔 {text reeeeee} 1 测试 []}] success.
+2017/03/08 16:23:13  INFO [controller.(*Logic).Run](logic.go:60) server starting on[:7171]..
+2017/03/08 16:23:22 DEBUG [controller.(*RobotGroupMass).handleGroupMass](robot_group_mass.go:114) handle group mass[&{Lefit铅笔 {text reeeeee} 1 测试 []}] start.
+2017/03/08 16:23:22  INFO [models.CreateRobotGroupMass](wx_group_mass.go:37) create robot chat robot[Lefit铅笔] group mass success.
+2017/03/08 16:23:22 DEBUG [controller.(*RobotExt).SendMsgs](robot_ext.go:189) msg: &{[{Lefit铅笔 group 测试11111 @@2786daf33443ad8a21c4537acd0b4aff12f2366ed0e61b994e35882f1d178a89 text reeeeee☑}]}
+2017/03/08 16:23:29 DEBUG [controller.(*RobotExt).SendMsgs](robot_ext.go:189) msg: &{[{Lefit铅笔 group 测试 @@078cd17d5b7b11b26d86ecd761afc730314ef062e7081a15f9bc5a5a617109f0 text reeeeee┄}]}
+2017/03/08 16:23:31 DEBUG [controller.(*RobotGroupMass).handleGroupMass](robot_group_mass.go:158) handle group mass[&{Lefit铅笔 {text reeeeee} 1 测试 []}] success.
+2017/03/08 16:25:40  INFO [models.CreateRobotGroupChat](wx_group_chat.go:54) create robot chat robot[Lefit铅笔] group[测试] fromUser[REAL_MANAGER_WOWOWO_REE] content[[机智] @jasonk ] success.
+2017/03/08 16:25:40 DEBUG [controller.(*RobotMsgFilter).handleTiren](robot_msg_filter.go:89) nickname[REAL_MANAGER_WOWOWO_REE] group[测试] tiren[jasonk] memberNickName: 6
+2017/03/08 16:25:41  INFO [models.CreateRobotBlacklist](account.go:33) create robot blacklist[&{11 Lefit铅笔 @78f7b8d872e740eac18801bbff673c20 jasonk 1488961541 1488961541}] success.
+2017/03/08 16:26:22 DEBUG [controller.(*Logic).RobotGroupMod](robot_logic.go:24) robot group mod: &{{236582502 @d98a7ce45f4cee0d305cfebafa2e5482d887a7c230f978f9be7631cdc41e1967 Lefit铅笔 modgroupadddetail group @@078cd17d5b7b11b26d86ecd761afc730314ef062e7081a15f9bc5a5a617109f0 @78f7b8d872e740eac18801bbff673c20 jasonk 测试} {  } {      0 }    5}
+2017/03/08 16:26:22 DEBUG [controller.(*Logic).RobotGroupMod](robot_logic.go:35) has in this.

@@ -1,0 +1,189 @@
+2017/03/07 16:07:56  INFO [controller.(*Logic).Run](logic.go:53) server starting on[:7171]..
+2017/03/07 16:17:03  INFO [controller.(*Logic).Run](logic.go:53) server starting on[:7171]..
+2017/03/07 16:19:32  INFO [controller.(*Logic).Run](logic.go:53) server starting on[:7171]..
+2017/03/07 16:22:20  INFO [controller.(*Logic).Run](logic.go:53) server starting on[:7171]..
+2017/03/07 16:22:39  INFO [controller.(*Logic).Run](logic.go:53) server starting on[:7171]..
+2017/03/07 16:23:57  INFO [controller.(*Logic).Run](logic.go:53) server starting on[:7171]..
+2017/03/07 16:24:24  INFO [controller.(*Logic).Run](logic.go:53) server starting on[:7171]..
+2017/03/07 16:25:07  INFO [controller.(*Logic).Run](logic.go:53) server starting on[:7171]..
+2017/03/07 16:28:56 DEBUG [models.GetRobot](wx_robot.go:24) cannot find robot from robot_wx[Lefit铅笔]
+2017/03/07 16:28:56 ERROR [controller.(*Logic).RobotSaveGroups](robot_endpoint.go:36) cannot found this robot[Lefit铅笔]
+2017/03/07 16:37:20  INFO [controller.(*Logic).Run](logic.go:53) server starting on[:7171]..
+2017/03/07 16:38:46  INFO [controller.(*Logic).Run](logic.go:53) server starting on[:7171]..
+2017/03/07 16:42:21 DEBUG [controller.(*RobotGroupMass).handleGroupMass](robot_group_mass.go:113) handle group mass[&{ {text reeeeee} 1 测试 []}] start.
+2017/03/07 16:42:21 DEBUG [models.GetRobot](wx_robot.go:27) cannot find robot from robot_wx[]
+2017/03/07 16:42:21 ERROR [controller.(*RobotGroupMass).handleGroupMass](robot_group_mass.go:125) cannot found robot[]
+2017/03/07 16:43:04 DEBUG [controller.(*RobotGroupMass).handleGroupMass](robot_group_mass.go:113) handle group mass[&{Lefit铅笔 {text reeeeee} 1 测试 []}] start.
+2017/03/07 16:43:04 DEBUG [controller.(*RobotExt).SendMsgs](robot_ext.go:189) msg: &{[{Lefit铅笔 group 测试 @@90f7aec56dd5dfca86f7b2eb9c0513bdd6a5dc53e9a9399390a861bef1745db9 text reeeeee↞}]}
+2017/03/07 16:43:06 DEBUG [controller.(*RobotGroupMass).handleGroupMass](robot_group_mass.go:156) handle group mass[&{Lefit铅笔 {text reeeeee} 1 测试 []}] success.
+2017/03/07 16:47:56 DEBUG [controller.(*RobotGroupMass).handleGroupMass](robot_group_mass.go:113) handle group mass[&{Lefit铅笔 {text reeeeee} 1 测试 []}] start.
+2017/03/07 16:47:56 DEBUG [controller.(*RobotExt).SendMsgs](robot_ext.go:189) msg: &{[{Lefit铅笔 group 测试11111 @@2786daf33443ad8a21c4537acd0b4aff12f2366ed0e61b994e35882f1d178a89 text reeeeee✔}]}
+2017/03/07 16:47:58 DEBUG [controller.(*RobotExt).SendMsgs](robot_ext.go:189) msg: &{[{Lefit铅笔 group 测试 @@b7842c4f1cef3fa535c351d51b8ee076fa340bdde443737d38732cca51025037 text reeeeee↓}]}
+2017/03/07 16:48:00 DEBUG [controller.(*RobotGroupMass).handleGroupMass](robot_group_mass.go:156) handle group mass[&{Lefit铅笔 {text reeeeee} 1 测试 []}] success.
+2017/03/07 17:08:06  INFO [controller.(*Logic).Run](logic.go:54) server starting on[:7171]..
+2017/03/07 17:12:10  INFO [controller.(*Logic).Run](logic.go:54) server starting on[:7171]..
+2017/03/07 17:13:45  INFO [controller.(*Logic).Run](logic.go:54) server starting on[:7171]..
+2017/03/07 17:14:21  INFO [controller.(*Logic).Run](logic.go:54) server starting on[:7171]..
+2017/03/07 17:22:48  INFO [controller.(*Logic).Run](logic.go:54) server starting on[:7171]..
+2017/03/07 17:22:52  INFO [models.CreateRobotManager](account.go:57) create robot manager[&{1 REAL_MANAGER_WOWOWO_REE 1488878572}] success.
+2017/03/07 17:50:12  INFO [models.CreateRobotGroupChat](wx_group_chat.go:52) create robot chat robot[Lefit铅笔] group[测试] fromUser[咪咪咪咪咪咪咪咪] content[T @jasonk ] success.
+2017/03/07 17:50:12 DEBUG [models.GetRobotManager](account.go:68) cannot find robot manager from unionid[咪咪咪咪咪咪咪咪]
+2017/03/07 17:50:12 ERROR [controller.(*RobotMsgFilter).handleTiren](robot_msg_filter.go:75) nickname[咪咪咪咪咪咪咪咪] is not manager
+2017/03/07 19:40:49  INFO [controller.(*Logic).Run](logic.go:54) server starting on[:7171]..
+2017/03/07 19:41:39  INFO [models.CreateRobotManager](account.go:57) create robot manager[&{2 REAL_MANAGER_WOWOWO_REE 1488886899}] success.
+2017/03/07 19:43:13 DEBUG [models.GetRobotGroupFromUserName](wx_group.go:99) cannot find robot group from user_name[@@e2b95346308b1394f8049d5d66279c9c3be0c438afd06145a32e2ef00f3e23d5]
+2017/03/07 19:43:13 ERROR [controller.(*Logic).getRobotGroup](robot_logic.go:84) get robot group from [&{0 0 Lefit铅笔  测试 0 0 0}] error: Error 1054: Unknown column 'name' in 'where clause'
+2017/03/07 19:43:13 ERROR [controller.(*Logic).AddChat](robot_logic.go:26) get msg robot group error: Error 1054: Unknown column 'name' in 'where clause'
+2017/03/07 19:45:26 DEBUG [models.GetRobotGroupFromUserName](wx_group.go:99) cannot find robot group from user_name[@@e2b95346308b1394f8049d5d66279c9c3be0c438afd06145a32e2ef00f3e23d5]
+2017/03/07 19:45:26 ERROR [controller.(*Logic).getRobotGroup](robot_logic.go:84) get robot group from [&{0 0 Lefit铅笔  测试 0 0 0}] error: Error 1054: Unknown column 'name' in 'where clause'
+2017/03/07 19:45:26 ERROR [controller.(*Logic).AddChat](robot_logic.go:26) get msg robot group error: Error 1054: Unknown column 'name' in 'where clause'
+2017/03/07 19:45:33  INFO [controller.(*Logic).Run](logic.go:54) server starting on[:7171]..
+2017/03/07 19:45:39 DEBUG [models.GetRobotGroupFromUserName](wx_group.go:99) cannot find robot group from user_name[@@e2b95346308b1394f8049d5d66279c9c3be0c438afd06145a32e2ef00f3e23d5]
+2017/03/07 19:45:39  INFO [models.CreateRobotGroupChat](wx_group_chat.go:52) create robot chat robot[Lefit铅笔] group[测试] fromUser[REAL_MANAGER_WOWOWO_REE] content[T @jasonk ] success.
+2017/03/07 19:45:39 DEBUG [controller.(*RobotMsgFilter).handleTiren](robot_msg_filter.go:80) nickname[REAL_MANAGER_WOWOWO_REE] group[测试] tiren[@jasonk ]
+2017/03/07 19:45:39 ERROR [controller.(*RobotExt).GroupTiren](robot_ext.go:77) group tiren result code error: 1 
+2017/03/07 19:45:39 ERROR [controller.(*RobotMsgFilter).handleTiren](robot_msg_filter.go:89) group tiren error: group tiren result error.
+2017/03/07 19:55:55 DEBUG [models.GetRobotGroupFromUserName](wx_group.go:99) cannot find robot group from user_name[@@685eab954c11f67b8850b34f890a651f06bc16e352b533acac734861fe19cff2]
+2017/03/07 19:55:55  INFO [models.CreateRobotGroupChat](wx_group_chat.go:52) create robot chat robot[Lefit铅笔] group[测试] fromUser[REAL_MANAGER_WOWOWO_REE] content[T @jasonk ] success.
+2017/03/07 19:55:55 DEBUG [controller.(*RobotMsgFilter).handleTiren](robot_msg_filter.go:80) nickname[REAL_MANAGER_WOWOWO_REE] group[测试] tiren[@jasonk ]
+2017/03/07 19:55:55 ERROR [controller.(*RobotExt).GroupTiren](robot_ext.go:77) group tiren result code error: 1 
+2017/03/07 19:55:55 ERROR [controller.(*RobotMsgFilter).handleTiren](robot_msg_filter.go:89) group tiren error: group tiren result error.
+2017/03/07 19:59:05  INFO [controller.(*Logic).Run](logic.go:54) server starting on[:7171]..
+2017/03/07 19:59:31  INFO [models.CreateRobotGroupChat](wx_group_chat.go:52) create robot chat robot[Lefit铅笔] group[测试] fromUser[REAL_MANAGER_WOWOWO_REE] content[t @jasonk ] success.
+2017/03/07 19:59:31 DEBUG [controller.(*RobotMsgFilter).handleTiren](robot_msg_filter.go:84) nickname[REAL_MANAGER_WOWOWO_REE] group[测试] tiren[jasonk ]
+2017/03/07 19:59:31 ERROR [controller.(*RobotExt).GroupTiren](robot_ext.go:77) group tiren result code error: 1 
+2017/03/07 19:59:31 ERROR [controller.(*RobotMsgFilter).handleTiren](robot_msg_filter.go:93) group tiren error: group tiren result error.
+2017/03/07 19:59:54  INFO [models.CreateRobotGroupChat](wx_group_chat.go:52) create robot chat robot[Lefit铅笔] group[测试] fromUser[REAL_MANAGER_WOWOWO_REE] content[tt] success.
+2017/03/07 19:59:54 DEBUG [controller.(*RobotMsgFilter).handleTiren](robot_msg_filter.go:84) nickname[REAL_MANAGER_WOWOWO_REE] group[测试] tiren[tt]
+2017/03/07 19:59:54 ERROR [controller.(*RobotExt).GroupTiren](robot_ext.go:77) group tiren result code error: 1 
+2017/03/07 19:59:54 ERROR [controller.(*RobotMsgFilter).handleTiren](robot_msg_filter.go:93) group tiren error: group tiren result error.
+2017/03/07 20:00:28  INFO [controller.(*Logic).Run](logic.go:54) server starting on[:7171]..
+2017/03/07 20:01:12  INFO [controller.(*Logic).Run](logic.go:54) server starting on[:7171]..
+2017/03/07 20:01:19  INFO [models.CreateRobotGroupChat](wx_group_chat.go:52) create robot chat robot[Lefit铅笔] group[测试] fromUser[REAL_MANAGER_WOWOWO_REE] content[t @jasonk ] success.
+2017/03/07 20:01:19 DEBUG [controller.(*RobotMsgFilter).handleTiren](robot_msg_filter.go:85) nickname[REAL_MANAGER_WOWOWO_REE] group[测试] tiren[jasonk] memberNickName: 6
+2017/03/07 20:01:19 ERROR [controller.(*RobotExt).GroupTiren](robot_ext.go:77) group tiren result code error: 1 
+2017/03/07 20:01:19 ERROR [controller.(*RobotMsgFilter).handleTiren](robot_msg_filter.go:94) group tiren error: group tiren result error.
+2017/03/07 20:03:38 DEBUG [models.GetRobotGroupFromUserName](wx_group.go:99) cannot find robot group from user_name[@@23845c347543cef544890f752fc1cfdc7d4bbd276f44ec3def365f5097f01fec]
+2017/03/07 20:03:38  INFO [models.CreateRobotGroupChat](wx_group_chat.go:52) create robot chat robot[Lefit铅笔] group[测试] fromUser[REAL_MANAGER_WOWOWO_REE] content[t @jasonk ] success.
+2017/03/07 20:03:38 DEBUG [controller.(*RobotMsgFilter).handleTiren](robot_msg_filter.go:85) nickname[REAL_MANAGER_WOWOWO_REE] group[测试] tiren[jasonk] memberNickName: 6
+2017/03/07 20:03:38 ERROR [controller.(*RobotExt).GroupTiren](robot_ext.go:77) group tiren result code error: 1 
+2017/03/07 20:03:38 ERROR [controller.(*RobotMsgFilter).handleTiren](robot_msg_filter.go:94) group tiren error: group tiren result error.
+2017/03/07 20:07:23 DEBUG [models.GetRobotGroupFromUserName](wx_group.go:99) cannot find robot group from user_name[@@4fc3124c850d12037997e54cbc4bdb462dae07cff25b42185af7fea4037cfc04]
+2017/03/07 20:07:23  INFO [models.CreateRobotGroupChat](wx_group_chat.go:52) create robot chat robot[Lefit铅笔] group[测试] fromUser[REAL_MANAGER_WOWOWO_REE] content[t @jasonk ] success.
+2017/03/07 20:07:23 DEBUG [controller.(*RobotMsgFilter).handleTiren](robot_msg_filter.go:85) nickname[REAL_MANAGER_WOWOWO_REE] group[测试] tiren[jasonk] memberNickName: 6
+2017/03/07 20:21:41 DEBUG [models.GetRobotGroupFromUserName](wx_group.go:99) cannot find robot group from user_name[@@c8fb8d5020c2bbc991ec73f0bf3a05ada57b2023bfc870469abfedf41083c8ca]
+2017/03/07 20:21:41  INFO [models.CreateRobotGroupChat](wx_group_chat.go:52) create robot chat robot[Lefit铅笔] group[测试] fromUser[REAL_MANAGER_WOWOWO_REE] content[t @jasonk ] success.
+2017/03/07 20:21:41 DEBUG [controller.(*RobotMsgFilter).handleTiren](robot_msg_filter.go:85) nickname[REAL_MANAGER_WOWOWO_REE] group[测试] tiren[jasonk] memberNickName: 6
+2017/03/07 20:23:26  INFO [controller.(*Logic).Run](logic.go:54) server starting on[:7171]..
+2017/03/07 20:23:40  INFO [models.CreateRobotGroupChat](wx_group_chat.go:52) create robot chat robot[Lefit铅笔] group[测试] fromUser[REAL_MANAGER_WOWOWO_REE] content[t @jasonk ] success.
+2017/03/07 20:23:40 DEBUG [controller.(*RobotMsgFilter).handleTiren](robot_msg_filter.go:85) nickname[REAL_MANAGER_WOWOWO_REE] group[测试] tiren[jasonk] memberNickName: 6
+2017/03/07 20:23:41 DEBUG [controller.(*RobotMsgFilter).handleTiren] (robot_msg_filter.go:96) - &{ jasonk @ca671c0b211521c1d5e2a60f3d1bc12b}
+2017/03/07 20:36:21  INFO [controller.(*Logic).Run](logic.go:54) server starting on[:7171]..
+2017/03/07 20:36:27 DEBUG [controller.(*Logic).RobotGroupMod](robot_logic.go:24) robot group mod: Lefit铅笔  
+2017/03/07 20:36:27 ERROR [controller.(*Logic).RobotGroupMod](robot_logic.go:31) get robot blacklist from username error: Error 1054: Unknown column 'username' in 'where clause'
+2017/03/07 20:37:02  INFO [controller.(*Logic).Run](logic.go:54) server starting on[:7171]..
+2017/03/07 20:37:06 DEBUG [controller.(*Logic).RobotGroupMod](robot_logic.go:24) robot group mod: Lefit铅笔  
+2017/03/07 20:37:06 DEBUG [models.GetRobotBlacklistFromUsername](account.go:44) cannot find robot blacklist from robot[Lefit铅笔] username[@@c8fb8d5020c2bbc991ec73f0bf3a05ada57b2023bfc870469abfedf41083c8ca]
+2017/03/07 20:37:17  INFO [models.CreateRobotGroupChat](wx_group_chat.go:52) create robot chat robot[Lefit铅笔] group[测试] fromUser[REAL_MANAGER_WOWOWO_REE] content[t] success.
+2017/03/07 20:37:17 DEBUG [controller.(*RobotMsgFilter).handleTiren](robot_msg_filter.go:85) nickname[REAL_MANAGER_WOWOWO_REE] group[测试] tiren[t] memberNickName: 1
+2017/03/07 20:37:17 ERROR [controller.(*RobotExt).GroupTiren](robot_ext.go:77) group tiren result code error: 1 
+2017/03/07 20:37:17 ERROR [controller.(*RobotMsgFilter).handleTiren](robot_msg_filter.go:94) group tiren error: group tiren result error.
+2017/03/07 20:38:01  INFO [controller.(*Logic).Run](logic.go:54) server starting on[:7171]..
+2017/03/07 20:38:07  INFO [models.CreateRobotGroupChat](wx_group_chat.go:52) create robot chat robot[Lefit铅笔] group[测试] fromUser[REAL_MANAGER_WOWOWO_REE] content[t @jasonk ] success.
+2017/03/07 20:38:07 DEBUG [controller.(*RobotMsgFilter).handleTiren](robot_msg_filter.go:85) nickname[REAL_MANAGER_WOWOWO_REE] group[测试] tiren[jasonk] memberNickName: 6
+2017/03/07 20:38:07  INFO [models.CreateRobotBlacklist](account.go:33) create robot blacklist[&{1 Lefit铅笔 @ca671c0b211521c1d5e2a60f3d1bc12b jasonk 1488890287 1488890287}] success.
+2017/03/07 20:38:33 DEBUG [controller.(*Logic).RobotGroupMod](robot_logic.go:24) robot group mod: Lefit铅笔  
+2017/03/07 20:38:33 DEBUG [models.GetRobotBlacklistFromUsername](account.go:44) cannot find robot blacklist from robot[Lefit铅笔] username[@@c8fb8d5020c2bbc991ec73f0bf3a05ada57b2023bfc870469abfedf41083c8ca]
+2017/03/07 20:59:12  INFO [controller.(*Logic).Run](logic.go:54) server starting on[:7171]..
+2017/03/07 21:00:20 DEBUG [models.GetRobotGroupFromUserName](wx_group.go:99) cannot find robot group from user_name[@@1e9278e1accd07efa2e5f8222d90811243c6ef8dcc8bcab92c48732dc3a97e42]
+2017/03/07 21:00:20  INFO [models.CreateRobotGroupChat](wx_group_chat.go:52) create robot chat robot[Lefit铅笔] group[测试] fromUser[REAL_MANAGER_WOWOWO_REE] content[t @jasonk ] success.
+2017/03/07 21:00:20 DEBUG [controller.(*RobotMsgFilter).handleTiren](robot_msg_filter.go:85) nickname[REAL_MANAGER_WOWOWO_REE] group[测试] tiren[jasonk] memberNickName: 6
+2017/03/07 21:00:20  INFO [models.CreateRobotBlacklist](account.go:33) create robot blacklist[&{2 Lefit铅笔 @f2f1b9ae28e0dfd09a786e46690c03f7 jasonk 1488891620 1488891620}] success.
+2017/03/07 21:37:39 DEBUG [controller.(*Logic).RobotGroupMod](robot_logic.go:24) robot group mod: &{{236582502 @77e7a8f882bfef8fd7d7a76311af66741fd2e66b82bb412aa2bff7471f1987ad Lefit铅笔 modgroupadddetail group @159db001eefd18906f4ab0411b89b464efac9406eb843971e45038836584cb03 浅浅😁😂 测试} {  } {      0 }   }
+2017/03/07 21:37:39 DEBUG [models.GetRobotBlacklistFromUsername](account.go:44) cannot find robot blacklist from robot[Lefit铅笔] username[@159db001eefd18906f4ab0411b89b464efac9406eb843971e45038836584cb03]
+2017/03/07 21:40:44  INFO [controller.(*Logic).Run](logic.go:54) server starting on[:7171]..
+2017/03/07 21:41:19 DEBUG [models.GetRobotGroupFromUserName](wx_group.go:99) cannot find robot group from user_name[@@21abe098a8dcf99bd29918fffcfe0e08d77f205e7b08a9cb2b5c324f64d16bf2]
+2017/03/07 21:41:19  INFO [models.CreateRobotGroupChat](wx_group_chat.go:52) create robot chat robot[Lefit铅笔] group[测试] fromUser[REAL_MANAGER_WOWOWO_REE] content[t @jasonk ] success.
+2017/03/07 21:41:19 DEBUG [controller.(*RobotMsgFilter).handleTiren](robot_msg_filter.go:85) nickname[REAL_MANAGER_WOWOWO_REE] group[测试] tiren[jasonk] memberNickName: 6
+2017/03/07 21:41:19  INFO [models.CreateRobotBlacklist](account.go:33) create robot blacklist[&{3 Lefit铅笔 @d55bfc83eb90c5848af11512648fea75 jasonk 1488894079 1488894079}] success.
+2017/03/07 21:41:45 DEBUG [controller.(*Logic).RobotGroupMod](robot_logic.go:24) robot group mod: &{{236582502 @fcd1014b5a152fe26bb6d9d7ecb3644f33b51bad830741e14357dc84ab5fc546 Lefit铅笔 modgroupadddetail group @d55bfc83eb90c5848af11512648fea75 jasonk 测试} {  } {      0 }    5}
+2017/03/07 21:41:45 DEBUG [controller.(*Logic).RobotGroupMod](robot_logic.go:35) has in this.
+2017/03/07 21:42:03  INFO [models.CreateRobotGroupChat](wx_group_chat.go:52) create robot chat robot[Lefit铅笔] group[测试] fromUser[REAL_MANAGER_WOWOWO_REE] content[t @jasonk ] success.
+2017/03/07 21:42:03 DEBUG [controller.(*RobotMsgFilter).handleTiren](robot_msg_filter.go:85) nickname[REAL_MANAGER_WOWOWO_REE] group[测试] tiren[jasonk] memberNickName: 6
+2017/03/07 21:42:03  INFO [models.CreateRobotBlacklist](account.go:33) create robot blacklist[&{4 Lefit铅笔 @d55bfc83eb90c5848af11512648fea75 jasonk 1488894123 1488894123}] success.
+2017/03/07 21:53:20  INFO [controller.(*Logic).Run](logic.go:54) server starting on[:7171]..
+2017/03/07 21:53:51 DEBUG [controller.(*Logic).RobotGroupMod](robot_logic.go:24) robot group mod: &{{236582502 @49b9a40aa919379e85468635780548fb271303f76f9d0af3a91b355d5058224c Lefit铅笔 modgroupadddetail group @@736c8b100d9ff57d3ef042c4c4ecfcc881cb3d03b99b619563e0f9193e4b9f11 @ff529987241c8a950b1c88a25a9a8310 jasonk 测试} {  } {      0 }    5}
+2017/03/07 21:53:51 DEBUG [models.GetRobotBlacklistFromUsername](account.go:44) cannot find robot blacklist from robot[Lefit铅笔] username[@@736c8b100d9ff57d3ef042c4c4ecfcc881cb3d03b99b619563e0f9193e4b9f11]
+2017/03/07 21:54:07 DEBUG [models.GetRobotGroupFromUserName](wx_group.go:99) cannot find robot group from user_name[@@736c8b100d9ff57d3ef042c4c4ecfcc881cb3d03b99b619563e0f9193e4b9f11]
+2017/03/07 21:54:07  INFO [models.CreateRobotGroupChat](wx_group_chat.go:52) create robot chat robot[Lefit铅笔] group[测试] fromUser[REAL_MANAGER_WOWOWO_REE] content[t @jasonk ] success.
+2017/03/07 21:54:07 DEBUG [controller.(*RobotMsgFilter).handleTiren](robot_msg_filter.go:85) nickname[REAL_MANAGER_WOWOWO_REE] group[测试] tiren[jasonk] memberNickName: 6
+2017/03/07 21:54:08  INFO [models.CreateRobotBlacklist](account.go:33) create robot blacklist[&{5 Lefit铅笔 @ff529987241c8a950b1c88a25a9a8310 jasonk 1488894848 1488894848}] success.
+2017/03/07 22:01:15  INFO [controller.(*Logic).Run](logic.go:54) server starting on[:7171]..
+2017/03/07 22:02:07 DEBUG [controller.(*Logic).RobotGroupMod](robot_logic.go:24) robot group mod: &{{236582502 @282ebaecf07f8e7d1663743c1b52541219fbb802dce81904ac0f85b760911d03 Lefit铅笔 modgroupadddetail group @@95800299b991cfc7c5bbf0a8c2467dc89c4f3ccc177271c4881e24e8a751c152 @a8f2811f2a26107e97c6b13d20b96710287de814bfa874129fe29fbcb0b65727 浅浅😁😂 测试} {  } {      0 }    6}
+2017/03/07 22:02:07 DEBUG [models.GetRobotBlacklistFromUsername](account.go:44) cannot find robot blacklist from robot[Lefit铅笔] username[@@95800299b991cfc7c5bbf0a8c2467dc89c4f3ccc177271c4881e24e8a751c152]
+2017/03/07 22:02:48 DEBUG [models.GetRobotGroupFromUserName](wx_group.go:99) cannot find robot group from user_name[@@95800299b991cfc7c5bbf0a8c2467dc89c4f3ccc177271c4881e24e8a751c152]
+2017/03/07 22:02:48  INFO [models.CreateRobotGroupChat](wx_group_chat.go:52) create robot chat robot[Lefit铅笔] group[测试] fromUser[REAL_MANAGER_WOWOWO_REE] content[t @浅浅😼😹 ] success.
+2017/03/07 22:02:48 DEBUG [controller.(*RobotMsgFilter).handleTiren](robot_msg_filter.go:85) nickname[REAL_MANAGER_WOWOWO_REE] group[测试] tiren[浅浅😼😹] memberNickName: 14
+2017/03/07 22:02:48 ERROR [controller.(*RobotExt).GroupTiren](robot_ext.go:77) group tiren result code error: 1 
+2017/03/07 22:02:48 ERROR [controller.(*RobotMsgFilter).handleTiren](robot_msg_filter.go:94) group tiren error: group tiren result error.
+2017/03/07 23:03:35  INFO [controller.(*Logic).Run](logic.go:54) server starting on[:7171]..
+2017/03/07 23:03:54 DEBUG [models.GetRobotGroupFromUserName](wx_group.go:99) cannot find robot group from user_name[@@e2f95b6e50ae99fc503968871e4fce78ef194c1da2db817d547873b1acb54795]
+2017/03/07 23:03:54  INFO [models.CreateRobotGroupChat](wx_group_chat.go:52) create robot chat robot[Lefit铅笔] group[测试] fromUser[REAL_MANAGER_WOWOWO_REE] content[t @浅浅😼😹 ] success.
+2017/03/07 23:03:54 DEBUG [controller.(*RobotMsgFilter).handleTiren](robot_msg_filter.go:85) nickname[REAL_MANAGER_WOWOWO_REE] group[测试] tiren[浅浅😼😹] memberNickName: 14
+2017/03/07 23:03:54 ERROR [controller.(*RobotExt).GroupTiren](robot_ext.go:77) group tiren result code error: 1 
+2017/03/07 23:03:54 ERROR [controller.(*RobotMsgFilter).handleTiren](robot_msg_filter.go:94) group tiren error: group tiren result error.
+2017/03/07 23:16:24 DEBUG [models.GetRobotGroupFromUserName](wx_group.go:99) cannot find robot group from user_name[@@05e92eb61b2be05114a1b280a9714e85fd98ba38100fe0ac0cbf880f64a8a2ff]
+2017/03/07 23:16:24  INFO [models.CreateRobotGroupChat](wx_group_chat.go:52) create robot chat robot[Lefit铅笔] group[测试] fromUser[REAL_MANAGER_WOWOWO_REE] content[t @浅浅<span class="emoji emoji1f63c"></span><span class="emoji emoji1f639"></span> ] success.
+2017/03/07 23:16:24 DEBUG [controller.(*RobotMsgFilter).handleTiren](robot_msg_filter.go:85) nickname[REAL_MANAGER_WOWOWO_REE] group[测试] tiren[浅浅<spanclass="emojiemoji1f63c"></span><spanclass="emojiemoji1f639"></span>] memberNickName: 78
+2017/03/07 23:16:24 ERROR [controller.(*RobotExt).GroupTiren](robot_ext.go:77) group tiren result code error: 1 
+2017/03/07 23:16:24 ERROR [controller.(*RobotMsgFilter).handleTiren](robot_msg_filter.go:94) group tiren error: group tiren result error.
+2017/03/07 23:21:08 DEBUG [models.GetRobotGroupFromUserName](wx_group.go:99) cannot find robot group from user_name[@@8e84b98c9ebb68e95c424bf1733eb1f83b6bcf05b57990c881314355b7b4bb1a]
+2017/03/07 23:21:08  INFO [models.CreateRobotGroupChat](wx_group_chat.go:52) create robot chat robot[Lefit铅笔] group[测试] fromUser[REAL_MANAGER_WOWOWO_REE] content[t] success.
+2017/03/07 23:21:08 DEBUG [controller.(*RobotMsgFilter).handleTiren](robot_msg_filter.go:85) nickname[REAL_MANAGER_WOWOWO_REE] group[测试] tiren[t] memberNickName: 1
+2017/03/07 23:21:08 ERROR [controller.(*RobotExt).GroupTiren](robot_ext.go:77) group tiren result code error: 1 
+2017/03/07 23:21:08 ERROR [controller.(*RobotMsgFilter).handleTiren](robot_msg_filter.go:94) group tiren error: group tiren result error.
+2017/03/07 23:21:09  INFO [models.CreateRobotGroupChat](wx_group_chat.go:52) create robot chat robot[Lefit铅笔] group[测试] fromUser[REAL_MANAGER_WOWOWO_REE] content[t @浅浅<span class="emoji emoji1f63c"></span><span class="emoji emoji1f639"></span> ] success.
+2017/03/07 23:21:09 DEBUG [controller.(*RobotMsgFilter).handleTiren](robot_msg_filter.go:85) nickname[REAL_MANAGER_WOWOWO_REE] group[测试] tiren[浅浅<spanclass="emojiemoji1f63c"></span><spanclass="emojiemoji1f639"></span>] memberNickName: 78
+2017/03/07 23:21:09 ERROR [controller.(*RobotExt).GroupTiren](robot_ext.go:77) group tiren result code error: 1 
+2017/03/07 23:21:09 ERROR [controller.(*RobotMsgFilter).handleTiren](robot_msg_filter.go:94) group tiren error: group tiren result error.
+2017/03/07 23:27:25  INFO [controller.(*Logic).Run](logic.go:54) server starting on[:7171]..
+2017/03/07 23:28:20 DEBUG [models.GetRobotGroupFromUserName](wx_group.go:99) cannot find robot group from user_name[@@e0a4b86ca22fcd67a3f3e88e4037ff20ccd21079cb338f0a21fbf9b78647a5b9]
+2017/03/07 23:28:20  INFO [models.CreateRobotGroupChat](wx_group_chat.go:52) create robot chat robot[Lefit铅笔] group[测试] fromUser[REAL_MANAGER_WOWOWO_REE] content[t @浅浅<span class="emoji emoji1f63c"></span><span class="emoji emoji1f639"></span> ] success.
+2017/03/07 23:28:20 DEBUG [controller.(*RobotMsgFilter).handleTiren](robot_msg_filter.go:85) nickname[REAL_MANAGER_WOWOWO_REE] group[测试] tiren[浅浅<span class="emoji emoji1f63c"></span><span class="emoji emoji1f639"></span>] memberNickName: 82
+2017/03/07 23:28:20 ERROR [controller.(*RobotExt).GroupTiren](robot_ext.go:77) group tiren result code error: 1 
+2017/03/07 23:28:20 ERROR [controller.(*RobotMsgFilter).handleTiren](robot_msg_filter.go:94) group tiren error: group tiren result error.
+2017/03/07 23:40:10 DEBUG [models.GetRobotGroupFromUserName](wx_group.go:99) cannot find robot group from user_name[@@2f07b2ad3b93f8b45302adc33cc90e55b7e769fb77c40c913532e35c64dac577]
+2017/03/07 23:40:10  INFO [models.CreateRobotGroupChat](wx_group_chat.go:52) create robot chat robot[Lefit铅笔] group[测试] fromUser[REAL_MANAGER_WOWOWO_REE] content[t @浅浅 ] success.
+2017/03/07 23:40:10 DEBUG [controller.(*RobotMsgFilter).handleTiren](robot_msg_filter.go:85) nickname[REAL_MANAGER_WOWOWO_REE] group[测试] tiren[浅浅] memberNickName: 6
+2017/03/07 23:40:11  INFO [models.CreateRobotBlacklist](account.go:33) create robot blacklist[&{6 Lefit铅笔 @dd78eac00030d309b8c6fd45599a47a6287eca1fb65ac57c22a868560812b5c7 浅浅 1488901211 1488901211}] success.
+2017/03/07 23:40:58 DEBUG [controller.(*Logic).RobotGroupMod](robot_logic.go:24) robot group mod: &{{236582502 @8b5811e9089dcfd33081022177ff289b24e7d2b6d1f9a2c1ccfe88b6c01099f3 Lefit铅笔 modgroupadddetail group @@2f07b2ad3b93f8b45302adc33cc90e55b7e769fb77c40c913532e35c64dac577 @dd78eac00030d309b8c6fd45599a47a6287eca1fb65ac57c22a868560812b5c7 浅浅 测试} {  } {      0 }    6}
+2017/03/07 23:40:58 DEBUG [models.GetRobotBlacklistFromUsername](account.go:44) cannot find robot blacklist from robot[Lefit铅笔] username[@@2f07b2ad3b93f8b45302adc33cc90e55b7e769fb77c40c913532e35c64dac577]
+2017/03/07 23:42:35  INFO [controller.(*Logic).Run](logic.go:54) server starting on[:7171]..
+2017/03/07 23:42:42  INFO [models.CreateRobotGroupChat](wx_group_chat.go:52) create robot chat robot[Lefit铅笔] group[测试] fromUser[REAL_MANAGER_WOWOWO_REE] content[t @浅浅 ] success.
+2017/03/07 23:42:42 DEBUG [controller.(*RobotMsgFilter).handleTiren](robot_msg_filter.go:85) nickname[REAL_MANAGER_WOWOWO_REE] group[测试] tiren[浅浅] memberNickName: 6
+2017/03/07 23:42:43  INFO [models.CreateRobotBlacklist](account.go:33) create robot blacklist[&{7 Lefit铅笔 @dd78eac00030d309b8c6fd45599a47a6287eca1fb65ac57c22a868560812b5c7 浅浅 1488901363 1488901363}] success.
+2017/03/07 23:46:01 DEBUG [models.GetRobotGroupFromUserName](wx_group.go:99) cannot find robot group from user_name[@@93acc89a6f4cd3682a18bd085ba25b293a3c04624fb3af9ab97f79e9663d6ea0]
+2017/03/07 23:46:01  INFO [models.CreateRobotGroupChat](wx_group_chat.go:52) create robot chat robot[Lefit铅笔] group[测试] fromUser[REAL_MANAGER_WOWOWO_REE] content[t @浅浅 ] success.
+2017/03/07 23:46:01 DEBUG [controller.(*RobotMsgFilter).handleTiren](robot_msg_filter.go:85) nickname[REAL_MANAGER_WOWOWO_REE] group[测试] tiren[浅浅] memberNickName: 6
+2017/03/07 23:46:01  INFO [models.CreateRobotBlacklist](account.go:33) create robot blacklist[&{8 Lefit铅笔 @00f310b4d790d978387156ec75dc5ee6eec0eed236f228f06750e1dc6f19c8c9 浅浅 1488901561 1488901561}] success.
+2017/03/07 23:47:21 DEBUG [controller.(*Logic).RobotGroupMod](robot_logic.go:24) robot group mod: &{{236582502 @a2dab7c350042b8bcea48ffc53ebc6a44d91233311b96e6c0cec30e462a8ad1f Lefit铅笔 modgroupadddetail group @@93acc89a6f4cd3682a18bd085ba25b293a3c04624fb3af9ab97f79e9663d6ea0 @00f310b4d790d978387156ec75dc5ee6eec0eed236f228f06750e1dc6f19c8c9 浅浅 测试} {  } {      0 }    6}
+2017/03/07 23:47:21 DEBUG [controller.(*Logic).RobotGroupMod](robot_logic.go:35) has in this.
+2017/03/07 23:48:48  INFO [controller.(*Logic).Run](logic.go:54) server starting on[:7171]..
+2017/03/07 23:49:33 DEBUG [models.GetRobotGroupFromUserName](wx_group.go:99) cannot find robot group from user_name[@@ea5fcdddfe2d168c018ed677726a34159d2d3c87436b610bee77ce837f909301]
+2017/03/07 23:49:33  INFO [models.CreateRobotGroupChat](wx_group_chat.go:52) create robot chat robot[Lefit铅笔] group[测试] fromUser[REAL_MANAGER_WOWOWO_REE] content[t @浅浅 ] success.
+2017/03/07 23:49:33 DEBUG [controller.(*RobotMsgFilter).handleTiren](robot_msg_filter.go:85) nickname[REAL_MANAGER_WOWOWO_REE] group[测试] tiren[浅浅] memberNickName: 6
+2017/03/07 23:49:33  INFO [models.CreateRobotBlacklist](account.go:33) create robot blacklist[&{9 Lefit铅笔 @8847a617941e74fcadb025fdd003b2a2140272a2662157faa6edf3b7df0690e6 浅浅 1488901773 1488901773}] success.
+2017/03/07 23:50:36 DEBUG [controller.(*Logic).RobotGroupMod](robot_logic.go:24) robot group mod: &{{236582502 @a5c8522cffa376aeddb4cc03979aa286e3e7389baaf74290bda98dabfec195e2 Lefit铅笔 modgroupadddetail group @@ea5fcdddfe2d168c018ed677726a34159d2d3c87436b610bee77ce837f909301 @8847a617941e74fcadb025fdd003b2a2140272a2662157faa6edf3b7df0690e6 浅浅 测试} {  } {      0 }    6}
+2017/03/07 23:50:36 DEBUG [controller.(*Logic).RobotGroupMod](robot_logic.go:35) has in this.
+2017/03/07 23:52:35 DEBUG [models.GetRobotGroupFromUserName](wx_group.go:99) cannot find robot group from user_name[@@1ed935e9f7f62d717fe8a3f43e846fc497d2d69e94efddefdc1a55a405ec62a2]
+2017/03/07 23:52:35  INFO [models.CreateRobotGroupChat](wx_group_chat.go:52) create robot chat robot[Lefit铅笔] group[测试] fromUser[REAL_MANAGER_WOWOWO_REE] content[t @浅浅 ] success.
+2017/03/07 23:52:35 DEBUG [controller.(*RobotMsgFilter).handleTiren](robot_msg_filter.go:85) nickname[REAL_MANAGER_WOWOWO_REE] group[测试] tiren[浅浅] memberNickName: 6
+2017/03/07 23:52:35  INFO [models.CreateRobotBlacklist](account.go:33) create robot blacklist[&{10 Lefit铅笔 @f94cabac512985fd36d726f7a03b69b85ea6abd4454625af7f65eb9422132198 浅浅 1488901955 1488901955}] success.
+2017/03/07 23:53:08 DEBUG [controller.(*Logic).RobotGroupMod](robot_logic.go:24) robot group mod: &{{236582502 @803cecf626e231cc872072da83156eb4b089dca6873e1b49c7671650f468b81c Lefit铅笔 modgroupadddetail group @@1ed935e9f7f62d717fe8a3f43e846fc497d2d69e94efddefdc1a55a405ec62a2 @f94cabac512985fd36d726f7a03b69b85ea6abd4454625af7f65eb9422132198 浅浅 测试} {  } {      0 }    6}
+2017/03/07 23:53:08 DEBUG [controller.(*Logic).RobotGroupMod](robot_logic.go:35) has in this.
+2017/03/07 23:53:34 DEBUG [controller.(*Logic).RobotGroupMod](robot_logic.go:24) robot group mod: &{{236582502 @803cecf626e231cc872072da83156eb4b089dca6873e1b49c7671650f468b81c Lefit铅笔 modgroupadddetail group @@1ed935e9f7f62d717fe8a3f43e846fc497d2d69e94efddefdc1a55a405ec62a2 @f94cabac512985fd36d726f7a03b69b85ea6abd4454625af7f65eb9422132198 浅浅 测试} {  } {      0 }    6}
+2017/03/07 23:53:34 DEBUG [controller.(*Logic).RobotGroupMod](robot_logic.go:35) has in this.
+2017/03/07 23:55:58 DEBUG [controller.(*Logic).RobotGroupMod](robot_logic.go:24) robot group mod: &{{236582502 @803cecf626e231cc872072da83156eb4b089dca6873e1b49c7671650f468b81c Lefit铅笔 modgroupadddetail group @@1ed935e9f7f62d717fe8a3f43e846fc497d2d69e94efddefdc1a55a405ec62a2 @f94cabac512985fd36d726f7a03b69b85ea6abd4454625af7f65eb9422132198 浅浅 测试} {  } {      0 }    6}
+2017/03/07 23:55:58 DEBUG [controller.(*Logic).RobotGroupMod](robot_logic.go:35) has in this.
+2017/03/07 23:56:44 DEBUG [controller.(*Logic).RobotGroupMod](robot_logic.go:24) robot group mod: &{{236582502 @803cecf626e231cc872072da83156eb4b089dca6873e1b49c7671650f468b81c Lefit铅笔 modgroupadddetail group @@1ed935e9f7f62d717fe8a3f43e846fc497d2d69e94efddefdc1a55a405ec62a2 @f94cabac512985fd36d726f7a03b69b85ea6abd4454625af7f65eb9422132198 浅浅 测试} {  } {      0 }    6}
+2017/03/07 23:56:44 DEBUG [controller.(*Logic).RobotGroupMod](robot_logic.go:35) has in this.
