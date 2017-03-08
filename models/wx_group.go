@@ -10,8 +10,8 @@ import (
 type RobotGroup struct {
 	ID             int64  `xorm:"pk autoincr"`
 	RobotId        int64  `xorm:"not null default 0 int index" json:"robotId"`
-	RobotWx        string `xorm:"not null default '' varchar(128) index" json:"robotWx"`
-	UserName       string `xorm:"not null default '' varchar(256) index" json:"userName"`
+	RobotWx        string `xorm:"varchar(128) not null default '' unique(uni_robot_username)" json:"robotWx"`
+	UserName       string `xorm:"varchar(128) not null default '' unique(uni_robot_username)" json:"userName"`
 	GroupNickName  string `xorm:"not null default '' varchar(256) index" json:"groupNickName"`
 	GroupMemberNum int64  `xorm:"not null default 0 int" json:"groupMemberNum"`
 	CreatedAt      int64  `xorm:"not null default 0 int" json:"createAt"`
