@@ -54,3 +54,11 @@ type GetRobotGroupMassReq struct {
 type GetRobotGroupMassFromRobotReq struct {
 	RobotWx string `json:"robotWx"`
 }
+
+type SendGroupMsgReq struct {
+	RobotWx       string `json:"robotWx"`
+	GroupUserName string `json:"groupUserName"`
+	GroupNickName string `json:"groupNickName"`
+	MsgType       string `json:"msgType"`
+	Msg           string `json:"msg"`
+}

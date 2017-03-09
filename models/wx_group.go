@@ -113,3 +113,9 @@ func UpdateRobotGroupUserName(info *RobotGroup) error {
 	_, err := x.ID(info.ID).Cols("user_name", "updated_at").Update(info)
 	return err
 }
+
+func UpdateRobotGroupGroupMemberNum(info *RobotGroup) error {
+	info.UpdatedAt = time.Now().Unix()
+	_, err := x.ID(info.ID).Cols("group_member_num", "updated_at").Update(info)
+	return err
+}

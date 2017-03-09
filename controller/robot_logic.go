@@ -56,6 +56,9 @@ func (self *Logic) AddChat(msg *ReceiveMsgInfo) {
 			holmes.Error("get msg robot group error: %v", err)
 			return
 		}
+		group.GroupMemberNum = int64(msg.GroupMemberNum)
+		models.UpdateRobotGroupGroupMemberNum(group)
+		
 		rgc := &models.RobotGroupChat{
 			RobotId:        group.RobotId,
 			RobotWx:        group.RobotWx,

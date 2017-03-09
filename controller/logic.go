@@ -45,6 +45,7 @@ func (self *Logic) init() {
 	http.HandleFunc("/manager/get_new_group_chat", self.GetRobotGroupChatNew)
 	http.HandleFunc("/manager/get_group_mass", self.GetRobotGroupMassList)
 	http.HandleFunc("/manager/get_robot_group_mass", self.GetRobotGroupMassFromRobot)
+	http.HandleFunc("/manager/send_group_msg", self.RobotSendGroupMsg)
 }
 
 func (self *Logic) Run() {

@@ -21,7 +21,7 @@ func (self *Logic) handleCreateManager(req *RobotCreateManagerReq) error {
 		holmes.Error("robot find friend error: %v", err)
 		return err
 	}
-	if uf == nil {
+	if uf == nil || (uf.UserName == "" && uf.NickName == "") {
 		holmes.Error("cannot found this man[%s] from robot[%s]", req.Nickname, req.RobotWx)
 		return fmt.Errorf("cannot found this man[%s] from robot[%s]", req.Nickname, req.RobotWx)
 	}

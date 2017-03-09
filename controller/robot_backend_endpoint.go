@@ -138,3 +138,30 @@ func (self *Logic) GetRobotGroupMassFromRobot(w http.ResponseWriter, r *http.Req
 	rsp.Data = list
 	WriteJSON(w, http.StatusOK, rsp)
 }
+
+func (self *Logic) RobotSendGroupMsg(w http.ResponseWriter, r *http.Request) {
+	if r.Method != "POST" {
+		WriteJSON(w, http.StatusOK, nil)
+		return
+	}
+	
+	req := &SendGroupMsgReq{}
+	if err := json.NewDecoder(r.Body).Decode(req); err != nil {
+		holmes.Error("RobotSendGroupMsg json decode error: %v", err)
+		return
+	}
+	rsp := &Response{Code: RESPONSE_OK}
+	
+	var sendReq SendMsgInfo
+	sendReq.SendMsgs = append(sendReq.SendMsgs, SendBaseInfo{
+		WechatNick: req.RobotWx,
+		ChatType:   CHAT_TYPE_GROUP,
+		UserName:   req.GroupUserName,
+		NickName:   req.GroupNickName,
+		MsgType:    req.MsgType,
+		Msg:        req.Msg,
+	})
+	self.robotExt.SendMsgs(req.RobotWx, &sendReq)
+	
+	WriteJSON(w, http.StatusOK, rsp)
+}
