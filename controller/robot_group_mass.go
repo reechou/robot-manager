@@ -141,6 +141,21 @@ func (self *RobotGroupMass) handleGroupMass(gm *GroupMassInfo) {
 					Msg:           &gm.Msg,
 				}
 				self.sendMsgs(gsmi)
+				rgc := &models.RobotGroupChat{
+					RobotId:       robot.ID,
+					RobotWx:       robot.RobotWx,
+					GroupId:       v.ID,
+					GroupName:     v.GroupNickName,
+					GroupUserName: v.UserName,
+					FromName:      robot.RobotWx,
+					MsgType:       gm.Msg.MsgType,
+					Content:       gm.Msg.Msg,
+					Source:        models.ROBOT_CHAT_SOURCE_FROM_WEB_MASS,
+				}
+				err = models.CreateRobotGroupChat(rgc)
+				if err != nil {
+					holmes.Error("create robot group chat error: %v", err)
+				}
 				time.Sleep(2 * time.Second)
 			}
 		}

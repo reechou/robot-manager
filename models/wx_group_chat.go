@@ -13,9 +13,10 @@ const (
 )
 
 const (
-	ROBOT_CHAT_SOURCE_FROM_USER  = "来自用户"
-	ROBOT_CHAT_SOURCE_FROM_WEB   = "来自web crm"
-	ROBOT_CHAT_SOURCE_FROM_PHONE = "来自手机"
+	ROBOT_CHAT_SOURCE_FROM_USER     = "来自用户"
+	ROBOT_CHAT_SOURCE_FROM_WEB      = "来自 web crm"
+	ROBOT_CHAT_SOURCE_FROM_WEB_MASS = "来自 web crm 群发"
+	ROBOT_CHAT_SOURCE_FROM_PHONE    = "来自手机"
 )
 
 type RobotGroupChat struct {
