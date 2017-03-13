@@ -164,8 +164,7 @@ func (self *Logic) RobotSendGroupMsg(w http.ResponseWriter, r *http.Request) {
 	err := self.robotExt.SendMsgs(req.RobotWx, &sendReq)
 	if err != nil {
 		holmes.Error("group send msg[%v] error: %v", req, err)
-		rsp.Data = RESPONSE_ERR
-		WriteJSON(w, http.StatusOK, rsp)
+		WriteErrorResponse(w, rsp)
 		return
 	}
 
@@ -239,8 +238,7 @@ func (self *Logic) GetLoginRobotList(w http.ResponseWriter, r *http.Request) {
 	list, err := self.robotExt.AllLoginRobots()
 	if err != nil {
 		holmes.Error("get all login robots error: %v", err)
-		rsp.Data = RESPONSE_ERR
-		WriteJSON(w, http.StatusOK, rsp)
+		WriteErrorResponse(w, rsp)
 		return
 	}
 	rsp.Data = list
@@ -263,8 +261,7 @@ func (self *Logic) RobotGroupTiren(w http.ResponseWriter, r *http.Request) {
 	_, err := self.robotExt.GroupTiren(req)
 	if err != nil {
 		holmes.Error("robot group tiren error: %v", err)
-		rsp.Data = RESPONSE_ERR
-		WriteJSON(w, http.StatusOK, rsp)
+		WriteErrorResponse(w, rsp)
 		return
 	}
 	
