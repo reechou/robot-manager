@@ -19,6 +19,10 @@ type DBInfo struct {
 	DBName string
 }
 
+type RobotHost struct {
+	Host string
+}
+
 type Config struct {
 	Debug   bool
 	Path    string
@@ -29,6 +33,7 @@ type Config struct {
 
 	RobotFilter
 	DBInfo
+	RobotHost
 }
 
 func NewConfig() *Config {

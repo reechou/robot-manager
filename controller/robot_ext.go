@@ -9,6 +9,7 @@ import (
 
 	"github.com/reechou/holmes"
 	"github.com/reechou/robot-manager/models"
+	"github.com/reechou/robot-manager/config"
 )
 
 const (
@@ -21,12 +22,47 @@ const (
 
 type RobotExt struct {
 	client *http.Client
+	cfg *config.Config
 }
 
-func NewRobotExt() *RobotExt {
+func NewRobotExt(cfg *config.Config) *RobotExt {
 	return &RobotExt{
 		client: &http.Client{},
+		cfg: cfg,
 	}
+}
+
+func (self *RobotExt) AllLoginRobots() (interface{}, error) {
+	url := "http://" + self.cfg.RobotHost.Host + ROBOT_ALL_ROBOTS_URI
+	req, err := http.NewRequest("POST", url, nil)
+	if err != nil {
+		holmes.Error("http new request error: %v", err)
+		return nil, err
+	}
+	req.Header.Set("Content-Type", "application/json")
+	resp, err := self.client.Do(req)
+	if err != nil {
+		holmes.Error("http do request error: %v", err)
+		return nil, err
+	}
+	defer resp.Body.Close()
+	rspBody, err := ioutil.ReadAll(resp.Body)
+	if err != nil {
+		holmes.Error("ioutil ReadAll error: %v", err)
+		return nil, err
+	}
+	var response WxResponse
+	err = json.Unmarshal(rspBody, &response)
+	if err != nil {
+		holmes.Error("json decode error: %v [%s]", err, string(rspBody))
+		return nil, err
+	}
+	if response.Code != 0 {
+		holmes.Error("get all login robots result code error: %d %s", response.Code, response.Msg)
+		return nil, fmt.Errorf("get all login robots result error.")
+	}
+	
+	return response.Data, nil
 }
 
 func (self *RobotExt) GroupTiren(request *RobotGroupTirenReq) (*GroupUserInfo, error) {

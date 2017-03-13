@@ -14,7 +14,7 @@ const (
 
 const (
 	ROBOT_CHAT_SOURCE_FROM_USER  = "来自用户"
-	ROBOT_CHAT_SOURCE_FROM_WEB   = "来自web cms"
+	ROBOT_CHAT_SOURCE_FROM_WEB   = "来自web crm"
 	ROBOT_CHAT_SOURCE_FROM_PHONE = "来自手机"
 )
 
@@ -78,7 +78,7 @@ func GetRobotGroupChatList(robotId, groupId, offset, num int64) ([]RobotGroupCha
 func GetRobotGroupNewChatList(robotId, timestamp int64) ([]RobotGroupChat, error) {
 	holmes.Debug("robotid[%d] t[%d] get new group chat list", robotId, timestamp)
 	var list []RobotGroupChat
-	err := x.Table(&RobotGroupChat{RobotId: robotId}).Where("robot_id = ?", robotId).And("created_at > ?", timestamp).Desc("created_at").Limit(50).Find(&list)
+	err := x.Table(&RobotGroupChat{RobotId: robotId}).Where("robot_id = ?", robotId).And("created_at > ?", timestamp).Desc("created_at").Limit(100).Find(&list)
 	if err != nil {
 		holmes.Error("robot_id[%d] get robot group new chat list error: %v", robotId, err)
 		return nil, err

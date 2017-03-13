@@ -22,7 +22,7 @@ type Logic struct {
 func NewLogic(cfg *config.Config) *Logic {
 	l := &Logic{
 		cfg:      cfg,
-		robotExt: NewRobotExt(),
+		robotExt: NewRobotExt(cfg),
 	}
 
 	l.msgFilter = NewRobotMsgFilter(cfg, l.robotExt)
@@ -46,6 +46,8 @@ func (self *Logic) init() {
 	http.HandleFunc("/manager/get_group_mass", self.GetRobotGroupMassList)
 	http.HandleFunc("/manager/get_robot_group_mass", self.GetRobotGroupMassFromRobot)
 	http.HandleFunc("/manager/send_group_msg", self.RobotSendGroupMsg)
+	http.HandleFunc("/manager/get_all_login_robots", self.GetLoginRobotList)
+	http.HandleFunc("/manager/robot_group_tiren", self.RobotGroupTiren)
 }
 
 func (self *Logic) Run() {
