@@ -74,7 +74,31 @@ func (self *Logic) GetRobotGroupChatNew(w http.ResponseWriter, r *http.Request) 
 
 	list, err := models.GetRobotGroupNewChatList(req.RobotId, req.Timestamp)
 	if err != nil {
-		holmes.Error("get robot group chat list error: %v", err)
+		holmes.Error("get robot group chat new list error: %v", err)
+		WriteErrorResponse(w, rsp)
+		return
+	}
+	rsp.Data = list
+	WriteJSON(w, http.StatusOK, rsp)
+}
+
+func (self *Logic) GetRobotGroupChatFromGroup(w http.ResponseWriter, r *http.Request) {
+	if r.Method != "POST" {
+		WriteJSON(w, http.StatusOK, nil)
+		return
+	}
+	
+	req := &GetRobotGroupChatFromGroupReq{}
+	if err := json.NewDecoder(r.Body).Decode(req); err != nil {
+		holmes.Error("GetRobotGroupChatFromGroup json decode error: %v", err)
+		return
+	}
+	
+	rsp := &Response{Code: RESPONSE_OK}
+	
+	list, err := models.GetRobotGroupChatList(req.RobotId, req.GroupId, req.Timestamp)
+	if err != nil {
+		holmes.Error("get robot group chat list from group error: %v", err)
 		WriteErrorResponse(w, rsp)
 		return
 	}

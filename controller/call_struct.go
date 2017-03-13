@@ -46,6 +46,12 @@ type GetRobotGroupChatNewReq struct {
 	Timestamp int64 `json:"timestamp"`
 }
 
+type GetRobotGroupChatFromGroupReq struct {
+	RobotId   int64 `json:"robotId"`
+	GroupId   int64 `json:"groupId"`
+	Timestamp int64 `json:"timestamp"`
+}
+
 type GetRobotGroupMassReq struct {
 	Offset int64 `json:"offset"`
 	Num    int64 `json:"num"`

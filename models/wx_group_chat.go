@@ -66,9 +66,10 @@ func GetRobotGroupChatListCount(robotId, groupId int64) (int64, error) {
 	return count, nil
 }
 
-func GetRobotGroupChatList(robotId, groupId, offset, num int64) ([]RobotGroupChat, error) {
+func GetRobotGroupChatList(robotId, groupId, timestamp int64) ([]RobotGroupChat, error) {
 	var list []RobotGroupChat
-	err := x.Table(&RobotGroupChat{RobotId: robotId}).Where("robot_id = ?", robotId).And("group_id = ?", groupId).Desc("created_at").Limit(int(num), int(offset)).Find(&list)
+	err := x.Table(&RobotGroupChat{RobotId: robotId}).Where("robot_id = ?", robotId).
+		And("group_id = ?", groupId).And("created_at < ?", timestamp).Desc("created_at").Limit(20).Find(&list)
 	if err != nil {
 		holmes.Error("group_id[%d] get robot group chat list error: %v", groupId, err)
 		return nil, err
@@ -79,7 +80,8 @@ func GetRobotGroupChatList(robotId, groupId, offset, num int64) ([]RobotGroupCha
 func GetRobotGroupNewChatList(robotId, timestamp int64) ([]RobotGroupChat, error) {
 	holmes.Debug("robotid[%d] t[%d] get new group chat list", robotId, timestamp)
 	var list []RobotGroupChat
-	err := x.Table(&RobotGroupChat{RobotId: robotId}).Where("robot_id = ?", robotId).And("created_at > ?", timestamp).Desc("created_at").Limit(100).Find(&list)
+	err := x.Table(&RobotGroupChat{RobotId: robotId}).Where("robot_id = ?", robotId).And("created_at > ?", timestamp).
+		Desc("created_at").Limit(100).Find(&list)
 	if err != nil {
 		holmes.Error("robot_id[%d] get robot group new chat list error: %v", robotId, err)
 		return nil, err
