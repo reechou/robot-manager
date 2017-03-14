@@ -282,11 +282,20 @@ func (self *Logic) RobotGroupTiren(w http.ResponseWriter, r *http.Request) {
 	}
 	
 	rsp := &Response{Code: RESPONSE_OK}
-	_, err := self.robotExt.GroupTiren(req)
+	gui, err := self.robotExt.GroupTiren(req)
 	if err != nil {
 		holmes.Error("robot group tiren error: %v", err)
 		WriteErrorResponse(w, rsp)
 		return
+	}
+	rbl := &models.RobotBlacklist{
+		RobotWx:  req.WechatNick,
+		UserName: gui.UserName,
+		NickName: gui.NickName,
+	}
+	err = models.CreateRobotBlacklist(rbl)
+	if err != nil {
+		holmes.Error("create robot blacklist error: %v", err)
 	}
 	
 	WriteJSON(w, http.StatusOK, rsp)
