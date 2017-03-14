@@ -51,6 +51,7 @@ type GroupMassInfo struct {
 	GroupMassType   int          `json:"groupMassType"`
 	GroupNamePrefix string       `json:"groupNamePrefix,omitempty"`
 	GroupList       []string     `json:"groupList,omitempty"`
+	Interval        int          `json:"interval"`
 }
 
 type RobotGroupMass struct {
@@ -111,6 +112,10 @@ func (self *RobotGroupMass) runWorker(stop chan struct{}) {
 }
 
 func (self *RobotGroupMass) handleGroupMass(gm *GroupMassInfo) {
+	interval := gm.Interval
+	if interval == 0 {
+		interval = self.cfg.GroupMassInterval
+	}
 	holmes.Debug("handle group mass[%v] start.", gm)
 	massRecord := self.recordGroupMass(gm)
 	switch gm.GroupMassType {
@@ -156,7 +161,7 @@ func (self *RobotGroupMass) handleGroupMass(gm *GroupMassInfo) {
 				if err != nil {
 					holmes.Error("create robot group chat error: %v", err)
 				}
-				time.Sleep(2 * time.Second)
+				time.Sleep(time.Duration(interval) * time.Second)
 			}
 		}
 	case GROUP_MASS_TYPE_SELECT_GROUPS:
@@ -167,7 +172,7 @@ func (self *RobotGroupMass) handleGroupMass(gm *GroupMassInfo) {
 				Msg:           &gm.Msg,
 			}
 			self.sendMsgs(gsmi)
-			time.Sleep(time.Duration(self.cfg.GroupMassInterval) * time.Second)
+			time.Sleep(time.Duration(interval) * time.Second)
 		}
 	}
 	holmes.Debug("handle group mass[%v] success.", gm)
