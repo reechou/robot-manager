@@ -58,7 +58,7 @@ func (self *Logic) AddChat(msg *ReceiveMsgInfo) {
 		}
 		group.GroupMemberNum = int64(msg.GroupMemberNum)
 		models.UpdateRobotGroupGroupMemberNum(group)
-		
+
 		rgc := &models.RobotGroupChat{
 			RobotId:        group.RobotId,
 			RobotWx:        group.RobotWx,

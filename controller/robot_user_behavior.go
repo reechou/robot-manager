@@ -7,5 +7,3 @@ import (
 type RobotUserBehavior struct {
 	sync.Mutex
 }
-
-

@@ -8,8 +8,8 @@ import (
 	"net/http"
 
 	"github.com/reechou/holmes"
-	"github.com/reechou/robot-manager/models"
 	"github.com/reechou/robot-manager/config"
+	"github.com/reechou/robot-manager/models"
 )
 
 const (
@@ -22,13 +22,13 @@ const (
 
 type RobotExt struct {
 	client *http.Client
-	cfg *config.Config
+	cfg    *config.Config
 }
 
 func NewRobotExt(cfg *config.Config) *RobotExt {
 	return &RobotExt{
 		client: &http.Client{},
-		cfg: cfg,
+		cfg:    cfg,
 	}
 }
 
@@ -61,7 +61,7 @@ func (self *RobotExt) AllLoginRobots() (interface{}, error) {
 		holmes.Error("get all login robots result code error: %d %s", response.Code, response.Msg)
 		return nil, fmt.Errorf("get all login robots result error.")
 	}
-	
+
 	return response.Data, nil
 }
 

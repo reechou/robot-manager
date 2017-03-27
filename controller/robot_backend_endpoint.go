@@ -87,15 +87,15 @@ func (self *Logic) GetRobotGroupChatFromGroup(w http.ResponseWriter, r *http.Req
 		WriteJSON(w, http.StatusOK, nil)
 		return
 	}
-	
+
 	req := &GetRobotGroupChatFromGroupReq{}
 	if err := json.NewDecoder(r.Body).Decode(req); err != nil {
 		holmes.Error("GetRobotGroupChatFromGroup json decode error: %v", err)
 		return
 	}
-	
+
 	rsp := &Response{Code: RESPONSE_OK}
-	
+
 	list, err := models.GetRobotGroupChatList(req.RobotId, req.GroupId, req.Timestamp)
 	if err != nil {
 		holmes.Error("get robot group chat list from group error: %v", err)
@@ -257,7 +257,7 @@ func (self *Logic) GetLoginRobotList(w http.ResponseWriter, r *http.Request) {
 		WriteJSON(w, http.StatusOK, nil)
 		return
 	}
-	
+
 	rsp := &Response{Code: RESPONSE_OK}
 	list, err := self.robotExt.AllLoginRobots()
 	if err != nil {
@@ -274,13 +274,13 @@ func (self *Logic) RobotGroupTiren(w http.ResponseWriter, r *http.Request) {
 		WriteJSON(w, http.StatusOK, nil)
 		return
 	}
-	
+
 	req := &RobotGroupTirenReq{}
 	if err := json.NewDecoder(r.Body).Decode(req); err != nil {
 		holmes.Error("RobotGroupTiren json decode error: %v", err)
 		return
 	}
-	
+
 	rsp := &Response{Code: RESPONSE_OK}
 	gui, err := self.robotExt.GroupTiren(req)
 	if err != nil {
@@ -297,6 +297,6 @@ func (self *Logic) RobotGroupTiren(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		holmes.Error("create robot blacklist error: %v", err)
 	}
-	
+
 	WriteJSON(w, http.StatusOK, rsp)
 }

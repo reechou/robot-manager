@@ -29,6 +29,8 @@ type Config struct {
 	Host    string
 	Version string
 
+	IfShowSqlLog bool
+
 	GroupMassInterval int
 
 	RobotFilter
