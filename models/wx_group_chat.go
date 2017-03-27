@@ -19,6 +19,11 @@ const (
 	ROBOT_CHAT_SOURCE_FROM_PHONE    = "来自手机"
 )
 
+const (
+	MSG_CHAT_SEND_OK = iota
+	MSG_CHAT_SEND_FAILED
+)
+
 type RobotGroupChat struct {
 	ID             int64  `xorm:"pk autoincr" json:"id"`
 	RobotId        int64  `xorm:"not null default 0 int index" json:"robotId"`
@@ -28,6 +33,7 @@ type RobotGroupChat struct {
 	GroupUserName  string `xorm:"not null default '' varchar(128)" json:"groupUserName"`
 	MemberUserName string `xorm:"not null default '' varchar(128)" json:"memberUserName"`
 	FromName       string `xorm:"not null default '' varchar(256)" json:"fromName"`
+	Status         int    `xorm:"not null default 0 int" json:"status"`
 	MsgType        string `xorm:"not null default '' varchar(16)" json:"msgType"`
 	Content        string `xorm:"not null default '' varchar(768)" json:"content"`
 	MediaTempUrl   string `xorm:"not null default '' varchar(256)" json:"mediaTempUrl,omitempty"`

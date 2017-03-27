@@ -145,7 +145,11 @@ func (self *RobotGroupMass) handleGroupMass(gm *GroupMassInfo) {
 					GroupNickName: v.GroupNickName,
 					Msg:           &gm.Msg,
 				}
-				self.sendMsgs(gsmi)
+				status := models.MSG_CHAT_SEND_OK
+				ok := self.sendMsgs(gsmi)
+				if !ok {
+					status = models.MSG_CHAT_SEND_FAILED
+				}
 				rgc := &models.RobotGroupChat{
 					RobotId:       robot.ID,
 					RobotWx:       robot.RobotWx,
@@ -153,6 +157,7 @@ func (self *RobotGroupMass) handleGroupMass(gm *GroupMassInfo) {
 					GroupName:     v.GroupNickName,
 					GroupUserName: v.UserName,
 					FromName:      robot.RobotWx,
+					Status:        status,
 					MsgType:       gm.Msg.MsgType,
 					Content:       gm.Msg.Msg,
 					Source:        models.ROBOT_CHAT_SOURCE_FROM_WEB_MASS,
@@ -200,10 +205,13 @@ type GroupSendMsgInfo struct {
 	Msg           *RobotMsgInfo
 }
 
-func (self *RobotGroupMass) sendMsgs(msg *GroupSendMsgInfo) {
+func (self *RobotGroupMass) sendMsgs(msg *GroupSendMsgInfo) bool {
 	var sendReq SendMsgInfo
-	offset := rand.Intn(len(RANDOM_MSG_ADD))
-	msgStr := msg.Msg.Msg + RANDOM_MSG_ADD[offset]
+	msgStr := msg.Msg.Msg
+	if msg.Msg.MsgType == MSG_TYPE_TEXT {
+		offset := rand.Intn(len(RANDOM_MSG_ADD))
+		msgStr = msg.Msg.Msg + RANDOM_MSG_ADD[offset]
+	}
 	sendReq.SendMsgs = append(sendReq.SendMsgs, SendBaseInfo{
 		WechatNick: msg.RobotWx,
 		ChatType:   CHAT_TYPE_GROUP,
@@ -212,7 +220,12 @@ func (self *RobotGroupMass) sendMsgs(msg *GroupSendMsgInfo) {
 		MsgType:    msg.Msg.MsgType,
 		Msg:        msgStr,
 	})
-	self.robotExt.SendMsgs(msg.RobotWx, &sendReq)
+	err := self.robotExt.SendMsgs(msg.RobotWx, &sendReq)
+	if err != nil {
+		holmes.Error("group mass send msg error: %v", err)
+		return false
+	}
+	return true
 }
 
 func init() {
