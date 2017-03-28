@@ -3,6 +3,7 @@ package controller
 import (
 	"encoding/json"
 	"net/http"
+	"strings"
 
 	"github.com/reechou/holmes"
 	"github.com/reechou/robot-manager/models"
@@ -176,6 +177,7 @@ func (self *Logic) RobotSendGroupMsg(w http.ResponseWriter, r *http.Request) {
 	}
 	rsp := &Response{Code: RESPONSE_OK}
 
+	msgStr := strings.Replace(req.Msg, "\u0026", "&", -1)
 	var sendReq SendMsgInfo
 	sendReq.SendMsgs = append(sendReq.SendMsgs, SendBaseInfo{
 		WechatNick: req.RobotWx,
@@ -183,7 +185,7 @@ func (self *Logic) RobotSendGroupMsg(w http.ResponseWriter, r *http.Request) {
 		UserName:   req.GroupUserName,
 		NickName:   req.GroupNickName,
 		MsgType:    req.MsgType,
-		Msg:        req.Msg,
+		Msg:        msgStr,
 	})
 	err := self.robotExt.SendMsgs(req.RobotWx, &sendReq)
 	if err != nil {

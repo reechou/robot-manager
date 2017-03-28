@@ -212,6 +212,7 @@ func (self *RobotGroupMass) sendMsgs(msg *GroupSendMsgInfo) bool {
 		offset := rand.Intn(len(RANDOM_MSG_ADD))
 		msgStr = msg.Msg.Msg + RANDOM_MSG_ADD[offset]
 	}
+	msgStr = strings.Replace(msgStr, "\u0026", "&", -1)
 	sendReq.SendMsgs = append(sendReq.SendMsgs, SendBaseInfo{
 		WechatNick: msg.RobotWx,
 		ChatType:   CHAT_TYPE_GROUP,
